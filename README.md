@@ -4,7 +4,7 @@
 Thomas Rowe
 
 ## GitHub Repository URL
-https://github.com/talrowe
+https://github.com/talrowe/cmsc115-unit8lab1
 
 ---
 
