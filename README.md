@@ -35,15 +35,16 @@ The tests confirmed that the existing implementation was already correct.
 # Commit 3: Task 2 (sumEvenNumbers)
 
 ## Which tests in Task2Test were failing before your fix?
--
+All three tests were failing: testEmpty, testOddNumbers, and testSumEvenNumbers.
 
 ## What was the issue in the code?
--
+The loop used `i <= values.length`, which caused the program to access an array index beyond the end of the array. The sum also started at 1 instead of 0.
 
 ## What change did you make to fix it?
--
+I changed the loop condition to `i < values.length` and initialized `sum` to 0.
 
 ## How did the tests help guide your fix?
+The tests showed that the method was throwing ArrayIndexOutOfBoundsException for every input. After fixing the loop and initial sum value, all three tests passed.
 -
 
 ---
