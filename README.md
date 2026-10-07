@@ -52,15 +52,16 @@ The tests showed that the method was throwing ArrayIndexOutOfBoundsException for
 # Commit 4: Task 3 (sumRange)
 
 ## Which tests in Task3Test were failing before your fix?
--
+The testSumRangeReverseOrder test was failing. It expected 15 but the method returned 0.
 
 ## What was the issue in the code?
--
+The loop only worked when the start value was less than or equal to the end value. When the range was given in reverse order, the loop never executed.
 
 ## What change did you make to fix it?
--
+I added logic to handle both ascending and descending ranges. If start is greater than end, the loop counts downward.
 
 ## How did the tests help guide your fix?
+The failing reverse-order test showed that the method needed to support ranges in both directions. After updating the loop logic, all three tests passed.
 -
 
 ---
@@ -68,26 +69,27 @@ The tests showed that the method was throwing ArrayIndexOutOfBoundsException for
 # Overall Reflection
 
 ## Which task was the easiest to fix? Why?
--
+Task 1 was the easiest because the existing getGrade method already passed all of the provided JUnit tests.
 
 ## Which task was the most difficult? Why?
--
+Task 3 was the most difficult because the method worked for normal ranges but failed when the start value was greater than the end value.
 
 ## How did Git help you track your progress through the debugging process?
--
+Git allowed me to save each stage of the debugging process as a separate commit and keep a history of the changes I made.
 
 ## Why is it important to make small, frequent commits when debugging code?
--
+Small commits make it easier to identify which changes fixed a problem and make it easier to return to an earlier working version.
 
 ## What did you learn about using JUnit tests to guide debugging?
--
+JUnit tests helped identify the specific inputs that caused incorrect behavior and confirmed when my changes fixed the problems.
 
 ---
 
 # Commit 5: Final Reflection
 
 ## What did you complete or update before making this final commit?
--
+I completed the Task 3 reflection, reviewed the previous reflection sections, and completed the overall reflection.
 
 ## Why is it useful to document your work after completing a programming task?
+Documentation provides a record of what was changed, why it was changed, and what was learned during the development process.
 -
